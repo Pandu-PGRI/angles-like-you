@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angels Like You - Miley Cyrus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+        }
+
+        .song-info h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #ffcc00;
+        }
+
+        .song-info h3 {
+            font-size: 16px;
+            color: #dcdcdc;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .player-box {
+            margin-bottom: 25px;
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        .lyrics-container {
+            max-height: 250px;
+            overflow-y: auto;
+            text-align: left;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .lyrics-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .lyrics-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .lyrics-container p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #b0b0b0;
+            white-space: pre-line;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="song-info">
+            <h1>Angels Like You</h1>
+            <h3>Miley Cyrus</h3>
+        </div>
+
+        <div class="player-box">
+            <!-- Ganti atribut src dengan URL file audio (.mp3) lagu Angels Like You yang kamu miliki -->
+            <audio id="audioPlayer" controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung pemutar audio.
+            </audio>
+        </div>
+
+        <div class="lyrics-container">
+            <p id="lyricsText">
+Flowers grow and then they fall
+(Muaranya...)
+I know you're gonna leave me, babe
+But right now, you're the only one who knows my mind
+
+...
+
+Miley Cyrus - Angels Like You
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Tambahan (Opsional): Contoh interaksi atau event listener audio
+        const audio = document.getElementById('audioPlayer');
+
+        audio.addEventListener('play', () => {
+            console.log("Lagu 'Angels Like You' mulai diputar.");
+        });
+
+        audio.addEventListener('pause', () => {
+            console.log("Lagu dijeda.");
+        });
+    </script>
+
+</body>
+</html>
